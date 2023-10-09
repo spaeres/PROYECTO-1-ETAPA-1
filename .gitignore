@@ -209,6 +209,9 @@ coverage.xml
 *.log
 local_settings.py
 
+cat_345.csv
+
+
 # Flask stuff:
 instance/
 .webassets-cache
