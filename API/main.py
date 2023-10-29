@@ -18,7 +18,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 
-# Se sube el archivo de Excel sin etiqeutar desde el front
+# Se sube el archivo de Excel sin etiquetar desde el front
 @app.post("/predict")
 def make_predictions(dataModel: DataModel):
     df = pd.DataFrame(dataModel.dict(), columns=dataModel.dict().keys(), index=[0])
