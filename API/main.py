@@ -1,11 +1,8 @@
 from typing import Union
 import pandas as pd
 from fastapi import FastAPI
-from joblib import load
-
-from API.PredicitonModel import Model
+from PredicitonModel import Model
 from DataModel import DataModel
-from pydantic import BaseModel
 
 app = FastAPI()
 
