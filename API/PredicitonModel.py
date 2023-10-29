@@ -3,7 +3,7 @@ from joblib import load
 
 class Model:
 
-    def __init__(self, columns):
+    def __init__(self):
         self.model = load("assets/tfidf_model.joblib")
         self.transform = load("assets/tfidf_transform.pkl")
 
