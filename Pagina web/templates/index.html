@@ -57,7 +57,7 @@ document.getElementById("csv-form").addEventListener("submit", function(e) {
     const formData = new FormData();
     formData.append("archivo_csv", archivoCSV);
 
-    fetch("http://127.0.0.1:8000/upload_csv", {
+    fetch("http://127.0.0.1:8000/predict", {
         method: "POST",
         body: formData,
     })
