@@ -1,13 +1,13 @@
-from joblib import load
+import joblib
 
 class Model:
 
     def __init__(self):
-        self.model = load("assets/tfidf_model.joblib")
-        self.transform = load("assets/tfidf_transform.pkl")
+        self.model = joblib.load("assets/tfidf_model.joblib")
+        self.tfidf = joblib.load("assets/tfidf_transform.pkl")
 
     def make_predictions(self, data):
         # Se transforman los datos con el transformador de TF-IDF:
-        self.transform.transform(data)
+        self.tfidf.transform(data)
         result = self.model.predict(data)
         return result
